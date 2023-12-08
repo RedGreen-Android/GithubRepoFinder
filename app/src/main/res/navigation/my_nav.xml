@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/userRepoScreen2">
+
+    <fragment
+        android:id="@+id/userDetailFragment"
+        android:name="com.example.githubreposearcher.ui.UserDetailFragment"
+        tools:layout="@layout/fragment_user_detail" />
+    <fragment
+        android:id="@+id/userRepoScreen2"
+        android:name="com.example.githubreposearcher.ui.UserRepoScreen"
+        tools:layout="@layout/fragment_user_repo_screen" >
+        <action
+            android:id="@+id/action_userRepoScreen2_to_userDetailFragment"
+            app:destination="@id/userDetailFragment"
+            app:popUpTo="@id/userRepoScreen2"
+            app:popUpToInclusive="true"/>
+    </fragment>
+</navigation>
